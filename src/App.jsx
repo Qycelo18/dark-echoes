@@ -25,19 +25,18 @@ export default function App() {
   }
 
   function Roster() {
-    if (selectedEpisode)
-      return (
-        <section className="roster">
-          <h2>Episodes</h2>
-          <ul className="roster">
-            {episodes.map((episode) => (
-              <li key={episode.id} onClick={() => setSelectedEpisode(episode)}>
-                {episode.title}
-              </li>
-            ))}
-          </ul>
-        </section>
-      );
+    return (
+      <section className="roster">
+        <h2>Episodes</h2>
+        <ul className="roster">
+          {episodes.map((episode) => (
+            <li key={episode.id} onClick={() => setSelectedEpisode(episode)}>
+              {episode.title}
+            </li>
+          ))}
+        </ul>
+      </section>
+    );
   }
 
   return (
